@@ -11,8 +11,5 @@ provider "azurerm" {
     features {}
     ## Add your Azure RM provider configuration here
     ## Example:
-  subscription_id = ""
-  tenant_id       = ""
-  client_id       = ""
-  client_secret   = ""
+
 }
