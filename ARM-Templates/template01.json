@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "name": "[concat(copyIndex('RGCopy'), 'armtemplateRG')]",
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2024-08-01",
+            "location": "Central India",
+            "copy": 
+            {
+                "name": "RGCopy",
+                "count": 2
+            }
+            
+        }
+        
+    ],
+    "outputs": {}
+}

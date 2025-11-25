@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "ResourceGroupLocation": {
+            "value": "Central India"
+        },
+        "vnetName": {
+            "value": "vmnet"
+        },
+        "subnet1Name": {
+            "value": "subnetA"
+        },
+        "publicIPName": {
+            "value": "vm-pubip"
+        },
+        "nicName": {
+            "value": "vm-nic"
+        },
+        "nsg": {
+            "value": "vm-nsg"
+        },
+        "VirtualMachineName": {
+            "value": "linuxvm1"
+        },        
+        "vmsize": {
+            "value": "Standard_B1s"
+        },
+        "vm_admin": {
+            "value": "azureadmin1"
+        },
+        "adminpass": {
+           "type": "string",
+           "reference": {
+               "keyVault": {
+                   "id": "/subscriptions/c868959c-97f8-40c2-af76-a99dfdf920fd/resourceGroups/ARM-Template-rg/providers/Microsoft.KeyVault/vaults/arm-template-vault991"
+               },
+               "secretName": "adminpass"
+           }
+        },
+        "admin_key": {
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMCvTBtpJAuQLZt04aOvSEBl1UEAboqYlc4odrh1u/4xquWFk7ecOSYCRm6HYNeKYeTkrnw1HRq9JySXlK6++lZPNF4a/z+TUjgSYB6tOw06OhFv08O+toBvVJ3I70qsXCpgNCCncTYyOmTAqq1ZtAfH96vRTkwPjODNs/S01krbBMWw+PeFCJOGMVVQgFRSxFSFZO6j8RTTy4oCeNs4p3IbE2GrGIcxi6D/nldprcGZ+ms7w+dmy1bqqQnzzITFEynBRM7GJJyTjy0jUnrhO0e7O3ousx+L7KxgiLGKNnp0IV25mutucVybvAUriE/aNics+flGH2aw5xybhPOCwUXe5fBpPZPOWJ/2N7mQdaVVVbg+ytr5STHR2aDMt35DAcUXXQNPB+Mjr7NszklBEXDCcZhG6j9gckaz01ERpdzuK0Om1kZPvj31voub/wGGvjaTkJdMlEDMQxQy2RPuLXmLg+RbV97qgIuYcN6FgfFJYqy8EWcXmEsMjFL6G5yvM= gudhayak@Z2P2PUGDEV0016"
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": []
+}
